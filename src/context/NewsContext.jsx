@@ -76,7 +76,11 @@ const NewsContextProvider = ({ children }) => {
         setLoading(true);
         try {
             const res = await api.get(
+<<<<<<< HEAD
                 `top-headlines?lang=en&country=in&`
+=======
+                `top-headlines?lang=en&country=in`
+>>>>>>> 6d4255dec1d07d9bf999b515f4eacc8b89b73e48
                 
                 // /
             );
