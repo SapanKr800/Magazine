@@ -9,6 +9,7 @@ import NewsCardSkeleton from './NewsCardSkeleton';
 const News = () => {
 
     const { data, loading } = useNewsContext();
+    console.log(import.meta.env.VITE_GNEWS_API_KEY);
 
     return (
         <>
