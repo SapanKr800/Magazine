@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/api", // 🔥 NOT gnews.io
+  baseURL: "/api", // 🔥 proxy base
 });
 
 export default api;

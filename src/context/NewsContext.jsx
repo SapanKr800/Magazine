@@ -19,7 +19,7 @@ const NewsContextProvider = ({ children }) => {
         setLoading(true);
         try {
             const response = await api.get(
-                `/top-headlines?topic=${cate}&lang=en&country=in`
+                `/news?category=${cate}`
             );
             setData(response.data.articles); // ✅ fixed
             setSearch("");
@@ -39,7 +39,7 @@ const NewsContextProvider = ({ children }) => {
         setLoading(true);
         try {
             const res = await api.get(
-                `/search?q=${query}&lang=en&country=in`
+               `/news?q=${query}`
 
             );
             setData(res.data.articles);
@@ -76,13 +76,7 @@ const NewsContextProvider = ({ children }) => {
         setLoading(true);
         try {
             const res = await api.get(
-<<<<<<< HEAD
-                `top-headlines?lang=en&country=in&`
-=======
-                `top-headlines?lang=en&country=in`
->>>>>>> 6d4255dec1d07d9bf999b515f4eacc8b89b73e48
-                
-                // /
+             `/news`
             );
             setLatestNews(res.data.articles || []);
         } catch (err) {
