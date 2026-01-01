@@ -19,7 +19,7 @@ const NewsContextProvider = ({ children }) => {
         setLoading(true);
         try {
             const response = await api.get(
-                `/news?category=${cate}`
+                `/gnews?category=${cate}`
             );
             setData(response.data.articles); // ✅ fixed
             setSearch("");
@@ -39,7 +39,7 @@ const NewsContextProvider = ({ children }) => {
         setLoading(true);
         try {
             const res = await api.get(
-               `/news?q=${query}`
+               `/gnews?q=${query}`
 
             );
             setData(res.data.articles);
@@ -76,7 +76,7 @@ const NewsContextProvider = ({ children }) => {
         setLoading(true);
         try {
             const res = await api.get(
-             `/news`
+             `/gnews`
             );
             setLatestNews(res.data.articles || []);
         } catch (err) {
